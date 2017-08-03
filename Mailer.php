@@ -15,6 +15,7 @@
  * All rights reserved for clonalejandro ©Mailer 2017 / 2018
  */
 
+
 /**
  * @param $sender
  * @param $receiver
@@ -23,12 +24,10 @@
  * @param $html
  */
 function sendMail($sender, $receiver, $subject, $content, $html){
-
     $headers = "From: $sender\r\n";
     $headers .= "Reply-To: $sender\r\n";
-
     if ($html)
-        $headers .= "Content-type: text-html; charset=utf-8"."\r\n";
-    
+        $headers .= "Content-Type: text/html; charset=\"iso-8859-1\" Content-Transfer-Encoding: quoted-printable; charset=utf-8"."\r\n";
+
     mail($receiver, $subject, $content, $headers);
 }
