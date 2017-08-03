@@ -5,6 +5,7 @@
 • Usage: 
 
 ```php
+<?php
 include ('Mailer.php');//File - Class
 
 $sender = "poop@mail.me";//String
@@ -14,6 +15,7 @@ $content = "<p>Hello world!</p>";//String formed in HTML
 $html = true;//Boolean
 
 sendMail($sender, $receiver, $subject, $content, $html);//Function
+?>
 ```
 <br>
 
