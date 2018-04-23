@@ -6,15 +6,17 @@
 
 ```php
 <?php
-include ('Mailer.php');//File - Class
+include ('Mailer.php');//Include php file
 
-$sender = "poop@mail.me";//String
-$receiver = "contact@clonalejandro.me";//String
-$subject = "Mail test";//String
-$content = "<p>Hello world!</p>";//String formed in HTML
-$html = true;//Boolean
+use io\clonalejandro\Mailer\Mailer as Mailer
 
-sendMail($sender, $receiver, $subject, $content, $html);//Function
+$sender = "poop@mail.me"; //string of mail sender
+$receiver = "contact@clonalejandro.me"; //string of mail receiver
+$subject = "Mail test"; //string of mail subject
+$content = "<p>Hello world!</p>"; //string of mail content formed in HTML
+$html = true; //boolean if mail content is formed in html format
+
+new Mailer($sender, $receiver, $subject, $content, $html); //Call the Class Mailer and throw this function
 ?>
 ```
 <br>
